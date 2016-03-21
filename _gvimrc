@@ -1,0 +1,21 @@
+"http://vimcolorschemetest.googlecode.com/svn/colors/rootwater.vim
+"http://vimcolorschemetest.googlecode.com/svn/html/index-pl.html
+
+
+set background=dark
+colorscheme hybrid
+set guioptions-=m " no menu
+set guioptions-=T " no toolbar
+set guioptions-=r " no right
+
+language messages en.utf-8
+"maximize window
+if has('win32')
+	au GUIEnter * simalt ~x
+else
+	au GUIEnter * call MaximizeWindow()
+endif 
+
+function! MaximizeWindow()
+	silent !wmctrl -r :ACTIVE: -b add,maximized_vert,maximized_horz
+endfunction
