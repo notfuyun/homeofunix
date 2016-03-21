@@ -65,6 +65,7 @@ set encoding=utf-8 "buffer
 set statusline=%{\"[\".(&fenc==\"\"?&enc:&fenc).((exists(\"+bomb\")\ &&\ &bomb)?\",B\":\"\")}\_%{&ff}\_%Y\][%L=%l,%v\_%p%%]\ %{strftime(\"%d/%m/%H:%M\")}\ %m%R\ %<%=%F%h%w
 set laststatus=2
 highlight StatusLine guifg=#000c00 guibg=#909f90
+highlight LineNr guifg=#339933
 set directory=$VIM/swap,.,~/tmp " swap file
 "show Show invisibles
 set list
