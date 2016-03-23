@@ -3,12 +3,17 @@
 
 
 set background=dark
-colorscheme hybrid
+colorscheme molokai  "hybrid
 set guioptions-=m " no menu
 set guioptions-=T " no toolbar
 set guioptions-=r " no right
 
-language messages en.utf-8
+"set ALL to ENGLISH
+set langmenu=en_US
+let $LANG = 'en_US'
+source $VIMRUNTIME/delmenu.vim
+source $VIMRUNTIME/menu.vim
+language messages en_US.utf-8
 "maximize window
 if has('win32')
 	au GUIEnter * simalt ~x

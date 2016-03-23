@@ -1,51 +1,18 @@
+"pathogen
+call pathogen#infect()
+filetype plugin on
+let g:go_disable_autoinstall = 0
+" Highlight
+let g:go_highlight_functions = 1
+let g:go_highlight_methods = 1
+let g:go_highlight_structs = 1
+let g:go_highlight_operators = 1
+let g:go_highlight_build_constraints = 1
+
+
+
 autocmd! bufwritepost _vimrc source ~/_vimrc
-"Vundle
-set nocompatible              " be iMproved, required
-filetype off                  " required
-" set the runtime path to include Vundle and initialize
-set rtp+=$HOME/vimfiles/bundle/Vundle.vim
-call vundle#begin('$HOME/vimfiles/bundle/')
-" alternatively, pass a path where Vundle should install plugins
-"call vundle#begin('~/some/path/here')
-
-" let Vundle manage Vundle, required
-Plugin 'VundleVim/Vundle.vim'
-
-" The following are examples of different formats supported.
-" Keep Plugin commands between vundle#begin/end.
-" plugin on GitHub repo
-Plugin 'tpope/vim-fugitive'
-" plugin from http://vim-scripts.org/vim/scripts.html
-Plugin 'L9'
-" Git plugin not hosted on GitHub
-Plugin 'git://git.wincent.com/command-t.git'
-" git repos on your local machine (i.e. when working on your own plugin)
-" Plugin 'file:///home/gmarik/path/to/plugin'
-" The sparkup vim script is in a subdirectory of this repo called vim.
-" Pass the path to set the runtimepath properly.
-Plugin 'rstacruz/sparkup', {'rtp': 'vim/'}
-" Install L9 and avoid a Naming conflict if you've already installed a
-" different version somewhere else.
-Plugin 'ascenator/L9', {'name': 'newL9'}
-
-" All of your Plugins must be added before the following line
-call vundle#end()            " required
-filetype plugin indent on    " required
-" To ignore plugin indent changes, instead use:
-"filetype plugin on
-"
-" Brief help
-" :PluginList       - lists configured plugins
-" :PluginInstall    - installs plugins; append `!` to update or just :PluginUpdate
-" :PluginSearch foo - searches for foo; append `!` to refresh local cache
-" :PluginClean      - confirms removal of unused plugins; append `!` to auto-approve removal
-"
-" see :h vundle for more details or wiki for FAQ
-" Put your non-Plugin stuff after this line
-
-
-
-syntax on
+syntax enable
 set nocompatible " above vi
 set smartindent
 set confirm "tip
@@ -54,18 +21,21 @@ set number "line
 " set textwidth=
 set nowrap "break line
 set numberwidth=1
-set guifont=Consolas
+"fonts for windows
+set guifont=Sauce_Code_PowerLine
+"set guifont="Sauce Code PowerLine"
 set gfw="Source Han Sans HW TC"
 "encoding begin
-"set fileformat=unix
-set fileencodings=ucs-bom,utf-8,cp936 "detect
+set fileformat=unix
+set fileencodings=ucs-bom,utf-8,cp936,chinese,latin-1 "detect
 set encoding=utf-8 "buffer
+set termencoding=utf-8
 "End encoding
 "%F%m%r%h%w fullpath
 set statusline=%{\"[\".(&fenc==\"\"?&enc:&fenc).((exists(\"+bomb\")\ &&\ &bomb)?\",B\":\"\")}\_%{&ff}\_%Y\][%L=%l,%v\_%p%%]\ %{strftime(\"%d/%m/%H:%M\")}\ %m%R\ %<%=%F%h%w
 set laststatus=2
 highlight StatusLine guifg=#000c00 guibg=#909f90
-highlight LineNr guifg=#339933
+highlight LineNR ctermfg=DarkMagenta guifg=#2b506e guibg=#000000
 set directory=$VIM/swap,.,~/tmp " swap file
 "show Show invisibles
 set list

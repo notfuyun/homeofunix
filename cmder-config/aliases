@@ -1,0 +1,11 @@
+e.=explorer .
+gl=git log --oneline --all --graph --decorate  $*
+ls=ls --show-control-chars -F --color $*
+ll=ls --show-control-chars -alF --color $*
+pwd=cd
+clear=cls
+history=cat %CMDER_ROOT%\config\.history
+unalias=alias /d $1
+
+ealiases=vim E:\app\cmder\config\aliases
+wget=wget -c --no-check-certificate $*
