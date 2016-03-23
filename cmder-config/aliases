@@ -9,3 +9,4 @@ unalias=alias /d $1
 
 ealiases=vim E:\app\cmder\config\aliases
 wget=wget -c --no-check-certificate $*
+cdgithub=pushd E:\app.data\github
