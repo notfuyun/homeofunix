@@ -34,8 +34,11 @@ set termencoding=utf-8
 "%F%m%r%h%w fullpath
 set statusline=%{\"[\".(&fenc==\"\"?&enc:&fenc).((exists(\"+bomb\")\ &&\ &bomb)?\",B\":\"\")}\_%{&ff}\_%Y\][%L=%l,%v\_%p%%]\ %{strftime(\"%d/%m/%H:%M\")}\ %m%R\ %<%=%F%h%w
 set laststatus=2
+" Theme
+set background=dark
+colorscheme molokai  "hybrid
+highlight LineNR ctermfg=DarkMagenta guifg=#cccc99 guibg=#000000
 highlight StatusLine guifg=#000c00 guibg=#909f90
-"highlight LineNR ctermfg=DarkMagenta guifg=#2b506e guibg=#000000
 set directory=$VIM/swap,.,~/tmp " swap file
 "show Show invisibles
 set list
