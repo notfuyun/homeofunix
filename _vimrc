@@ -24,7 +24,7 @@ set numberwidth=1
 "fonts for windows
 set guifont=Sauce_Code_PowerLine
 "set guifont="Sauce Code PowerLine"
-set gfw="Source Han Sans HW TC"
+set gfw="Source Han Code JP"
 "encoding begin
 set fileformat=unix
 set fileencodings=ucs-bom,utf-8,cp936,chinese,latin-1 "detect
