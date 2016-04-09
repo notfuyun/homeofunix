@@ -20,11 +20,11 @@ set confirm "tip
 set number "line
 " set textwidth=
 set nowrap "break line
-set numberwidth=1
+set numberwidth=6
 "fonts for windows
-set guifont=Sauce_Code_PowerLine
+set guifont=Iosevka
 "set guifont="Sauce Code PowerLine"
-set gfw="Source Han Code JP"
+set gfw=Iosevka
 "encoding begin
 set fileformat=unix
 set fileencodings=ucs-bom,utf-8,cp936,chinese,latin-1 "detect
@@ -36,9 +36,17 @@ set statusline=%{\"[\".(&fenc==\"\"?&enc:&fenc).((exists(\"+bomb\")\ &&\ &bomb)?
 set laststatus=2
 " Theme
 set background=dark
-colorscheme molokai  "hybrid
-highlight LineNR ctermfg=DarkMagenta guifg=#cccc99 guibg=#000000
-highlight StatusLine guifg=#000c00 guibg=#909f90
+"colorscheme lucius
+colorscheme jellybeans
+" LuciusBlack
+if !has("gui_running")
+    set term=xterm
+    set t_Co=256
+    colorscheme desert
+endif
+
+highlight LineNR ctermfg=DarkMagenta guifg=#336600 guibg=#000000
+highlight StatusLine guifg=#669900 guibg=#000000
 set directory=$VIM/swap,.,~/tmp " swap file
 "show Show invisibles
 set list
