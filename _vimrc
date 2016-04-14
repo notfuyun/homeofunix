@@ -58,5 +58,7 @@ highlight NonText guifg=#666633
 highlight SpecialKey guifg=#669966
 "End Show invisibles
 iab xdate <c-r>=strftime("%Y/%m/%d %H:%M:%S")<cr>
-imap <F5> <Esc> :w<CR> :GoRun<CR>
-map <F5> <Esc> :w<CR> :GoRun<CR>
+imap <F5> <Esc>:w<CR> :GoRun<CR>
+map <F5> <Esc>:w<CR> :GoRun<CR>
+map <F6>  <Esc>:w<CR>:set ff=unix<CR> :w<CR>
+imap <F6> <Esc>:w<CR>:set ff=unix<CR> :w<CR>
