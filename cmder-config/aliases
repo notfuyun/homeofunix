@@ -7,7 +7,8 @@ clear=cls
 history=cat %CMDER_ROOT%\config\.history
 unalias=alias /d $1
 
-ealiases=vim E:\app\cmder\config\aliases
+ealiases=gvim %CMDER_ROOT%\config\aliases
 wget=wget -c --no-check-certificate $*
-cdgithub=pushd E:\app.data\github
+github=pushd E:\runitonce\github
+one=pushd c:\users\douho\onedrive
 ll=ls --show-control-chars -alF --color $*
