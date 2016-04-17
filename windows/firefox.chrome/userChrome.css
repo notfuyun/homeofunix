@@ -1,0 +1,27 @@
+@namespace url("http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul"); /* only needed once */
+findbar {-moz-appearance: none !important; background-color: #663333!important; }
+#status-bar, .statuspanel-label {font-size: 10pt !important;font-weight: normal !important;color: darkslateblue !important;background-color:#333300!important;}
+#liberator-completions {
+    -moz-user-focus: ignore;
+    overflow: -moz-scrollbars-none !important; /* does not seem to work fully */
+    border-width: 0px !important;
+    /*-moz-appearance: none !important; /* prevent an ugly 3D border */
+    margin: 0px !important;
+    padding: 0px !important;
+}
+
+/* the selected item in listboxes is hardly readable without this */
+#liberator-completion    > listitem[selected="true"] > listcell,
+#liberator-bufferwindow  > listitem[selected="true"] > listcell,
+#liberator-previewwindow > listitem[selected="true"] > listcell {
+   color: black !important;
+   background-color: rgb(64,64,64) !important;
+   margin: 0px !important;
+   padding: 0px !important;
+}
+
+
+
+
+
+* {color:#ccc9c0 !important;}
