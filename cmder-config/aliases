@@ -12,3 +12,10 @@ wget=wget -c --no-check-certificate $*
 github=pushd E:\runitonce\github
 one=pushd c:\users\douho\onedrive
 ll=ls --show-control-chars -alF --color $*
+
+dhcp=netsh interface ip set address "Ethernet" source=dhcp
+dns=netsh interface ip set dnsservers "Ethernet" static $* primary
+dns2=netsh interface ip add dnsservers "Ethernet" $* index=2
+setip=netsh interface ip set address "Ethernet" static $*
+addip=netsh interface ip add address "Ethernet" $*
+
