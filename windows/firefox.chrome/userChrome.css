@@ -1,6 +1,7 @@
 @namespace url("http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul"); /* only needed once */
 findbar {-moz-appearance: none !important; background-color: #663333!important; }
 #status-bar, .statuspanel-label {font-size: 10pt !important;font-weight: normal !important;color: darkslateblue !important;background-color:#333300!important;}
+#status-bar, .statuspanel-label {font-size: 10pt !important;font-weight: normal !important;color: #111100!important;background-color:#333300!important;}
 #liberator-completions {
     -moz-user-focus: ignore;
     overflow: -moz-scrollbars-none !important; /* does not seem to work fully */
@@ -21,7 +22,28 @@ findbar {-moz-appearance: none !important; background-color: #663333!important; 
 }
 
 
+/* Warning: This might slow hint generation down! */
+#VimFxMarkersContainer .marker {
+  padding: 1px 2px 0 2px !important;
+  background-color: #000000!important;
+  border: solid 1px #AD810C !important;
+  border-radius: 2px !important;
+  box-shadow: 0 3px 7px 0 rgba(0, 0, 0, 0.3) !important;
+  font-size: 12px !important;
+  color:#ffcc99!important;
+  font-weight: bold !important;
+}
+#VimFxMarkersContainer .marker--matched,
+#VimFxMarkersContainer .marker-char--matched {
+  color: #ff9933!important;
+}
 
+ #identity-icon-labels,#identity-box, #identity-box *:not(#page-proxy-favicon) {
+ background: #000!important; 
+ border:none!important;
+ margin:none!important;
+ padding:none!important;
+ }
 
 
 * {color:#ccc9c0 !important;}
