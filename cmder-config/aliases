@@ -8,6 +8,7 @@ history=cat %CMDER_ROOT%\config\.history
 unalias=alias /d $1
 
 ealiases=gvim %CMDER_ROOT%\config\aliases
+caliases=copy D:\app\cmder\config\aliases E:\runitonce\github\homeofunix\cmder-config\aliases
 wget=wget -c --no-check-certificate $*
 github=pushd E:\runitonce\github
 one=pushd c:\users\douho\onedrive
