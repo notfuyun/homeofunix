@@ -47,8 +47,8 @@ findbar {-moz-appearance: none !important; background-color: #663333!important; 
 
 /* nav  tab bookmark */
 #nav-bar,#urlbar-container,#back-button,#tabbrowser-tabs,#PersonalToolbar,#TabsToolbar,
-.tab-background,#urlbar,#searchbar{
-	padding:none!important;border:none!important;margin:none!important; background:rgba(16,16,0,0.2)!important;
+.tab-background,#urlbar {
+	padding:none!important;border:none!important;margin:none!important; background:rgba(8,8,0,0.1)!important;
 }
 .tab-background-end[selected=true]:-moz-locale-dir(ltr):not(:-moz-lwtheme)::before,
 .tab-background-start[selected=true]:-moz-locale-dir(rtl):not(:-moz-lwtheme)::before, .tab-background-start[selected=true]:-moz-locale-dir(ltr):not(:-moz-lwtheme)::before,
