@@ -8,15 +8,17 @@ history=cat %CMDER_ROOT%\config\.history
 unalias=alias /d $1
 
 ealiases=gvim %CMDER_ROOT%\config\aliases
-caliases=copy D:\app\cmder\config\aliases E:\runitonce\github\homeofunix\cmder-config\aliases
+copyaliases=copy D:\app\cmder\config\aliases E:\runitonce\github\homeofunix\cmder-config\aliases
 wget=wget -c --no-check-certificate $*
-github=pushd E:\runitonce\github
+github=pushd E:\runitonce\github$*
 one=pushd c:\users\douho\onedrive
 ll=ls --show-control-chars -alF --color $*
 
-dhcp=netsh interface ip set address "Ethernet" source=dhcp
-dns=netsh interface ip set dnsservers "Ethernet" static $* primary
-dns2=netsh interface ip add dnsservers "Ethernet" $* index=2
+dhcp=netsh interface ip set address "Ethernet" source=dhcp & ipconfig/flushdns
+dnsdhcp=netsh interface ip set dnsserver name="Ethernet" source=dhcp & ipconfig/flushdns
+dns=netsh interface ip set dnsservers "Ethernet" static $* primary & ipconfig/flushdns
+wifidns=netsh interface ip set dnsservers "Wi-Fi" static $* primary & ipconfig/flushdns
+dns2=netsh interface ip add dnsservers "Ethernet" $* index=2 & ipconfig/flushdns
 setip=netsh interface ip set address "Ethernet" static $*
 addip=netsh interface ip add address "Ethernet" $*
 
