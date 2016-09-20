@@ -11,6 +11,7 @@ ealiases=gvim %CMDER_ROOT%\config\aliases
 copyaliases=copy D:\app\cmder\config\aliases E:\runitonce\github\homeofunix\cmder-config\aliases
 wget=wget -c --no-check-certificate $*
 github=pushd E:\runitonce\github$*
+gonnfung=pushd E:\runitonce\github.goonfung$*
 one=pushd c:\users\douho\onedrive
 ll=ls --show-control-chars -alF --color $*
 
