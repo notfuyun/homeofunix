@@ -1,55 +1,37 @@
 @namespace url("http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul"); /* only needed once */
-findbar {-moz-appearance: none !important; background-color: #663333!important; }
-#status-bar, .statuspanel-label {font-size: 10pt !important;font-weight: normal !important;color: darkslateblue !important;background-color:#333300!important;}
-#status-bar, .statuspanel-label {font-size: 10pt !important;font-weight: normal !important;color: #111100!important;background-color:#333300!important;}
+* {color:#ccc9c0 !important;border:none!important;}
+#titlebar-buttonbox-container,#titlebar,#titlebar-buttonbox {display:none!important;border:none!important;-moz-appearance: none !important;}
+
+#status-bar, .statuspanel-label {font-size: 10pt !important;font-weight: normal !important;color: #102030!important;background-color:#300!important;}
 #liberator-completions {
     -moz-user-focus: ignore;
     overflow: -moz-scrollbars-none !important; /* does not seem to work fully */
     border-width: 0px !important;
-    /*-moz-appearance: none !important; /* prevent an ugly 3D border */
+    -moz-appearance: none !important; /* prevent an ugly 3D border */
     margin: 0px !important;
     padding: 0px !important;
 }
 
-/* the selected item in listboxes is hardly readable without this */
-#liberator-completion    > listitem[selected="true"] > listcell,
-#liberator-bufferwindow  > listitem[selected="true"] > listcell,
-#liberator-previewwindow > listitem[selected="true"] > listcell {
-   color: black !important;
-   background-color: rgb(64,64,64) !important;
-   margin: 0px !important;
-   padding: 0px !important;
-}
-
-
 /* Warning: This might slow hint generation down! */
-#VimFxMarkersContainer .marker {
-  padding: 1px 2px 0 2px !important;
-  background-color: #000000!important;
-  border: solid 1px #AD810C !important;
-  border-radius: 2px !important;
-  box-shadow: 0 3px 7px 0 rgba(0, 0, 0, 0.3) !important;
-  font-size: 12px !important;
-  color:#ffcc99!important;
-  font-weight: bold !important;
-}
-#VimFxMarkersContainer .marker--matched,
-#VimFxMarkersContainer .marker-char--matched {
-  color: #ff9933!important;
-}
-
- #identity-icon-labels,#identity-box, #identity-box *:not(#page-proxy-favicon) {
- background: #000!important; 
- border:none!important;
- margin:none!important;
- padding:none!important;
- }
+#VimFxMarkersContainer .marker {padding: 1px 2px 0 2px !important; background-color: #000000!important; border: solid 1px #FD810C !important; border-radius: 2px !important; box-shadow: 0 3px 7px 0 rgba(0, 0, 0, 1) !important; font-size: 12px !important; color:#ffcc99!important; font-weight: bold !important;}
+#VimFxMarkersContainer .marker--matched, #VimFxMarkersContainer .marker-char--matched { color: #ff9933!important; }
+/* end vimfx */
 
 /* nav  tab bookmark */
-#nav-bar,#urlbar-container,#back-button,#tabbrowser-tabs,#PersonalToolbar,#TabsToolbar,
-.tab-background,#urlbar {
-	padding:none!important;border:none!important;margin:none!important; background:rgba(8,8,0,0.1)!important;
+#nav-bar,#urlbar-container,#back-button,#tabbrowser-tabs,#PersonalToolbar,#TabsToolbar, .tab-background,#urlbar, #personal-bookmarks {
+	background:#100!important;
 }
+#personal-bookmarks .bookmark-item > .toolbarbutton-text { color:#cdd!important}
+/* Auto-hide bookmarks toolbar */
+#PersonalToolbar {visibility: collapse !important;}
+#navigator-toolbox:hover > #PersonalToolbar {visibility: visible !important;}
+
+menupopup,menupopup > *
+{
+	font-size: 12pt!important;
+	background:#333!important;
+}
+
 .tab-background-end[selected=true]:-moz-locale-dir(ltr):not(:-moz-lwtheme)::before,
 .tab-background-start[selected=true]:-moz-locale-dir(rtl):not(:-moz-lwtheme)::before, .tab-background-start[selected=true]:-moz-locale-dir(ltr):not(:-moz-lwtheme)::before,
 .tab-background-end[selected=true]:-moz-locale-dir(rtl):not(:-moz-lwtheme)::before, .tab-background-start[selected=true]:-moz-locale-dir(ltr):-moz-lwtheme::before,
@@ -59,18 +41,42 @@ findbar {-moz-appearance: none !important; background-color: #663333!important; 
 .tab-background-start[selected=true]:-moz-locale-dir(rtl)::after, .tab-background-middle[selected=true], .tab-background-middle[selected=true]:-moz-lwtheme, .tab-background-start[selected=true]:-moz-lwtheme::before,
 .tab-background-end[selected=true]:-moz-lwtheme::before, #tabbrowser-tabs::before, .tabbrowser-tab:hover > .tab-stack > .tab-background:not([selected=true]){
 background-image: none !important;
-background-color: transparent !important;
-background-size: 100% 100%;
+background-color: #000!important; /*background-color: transparent !important;*/
+background-size: 100% 100%!important;
+font-weight:lighter;
 }
+
 .tabbrowser-tab[selected="true"] {
-  font-weight: bold !important;
-  color: rgba(255,255,255,1) !important;
-  background-image: linear-gradient(rgba(102,51,102,.85), rgba(102,51,102,.85) 50%),
-                    linear-gradient(-moz-dialog, -moz-dialog) !important;
+  font-weight: 900 !important;
+  color: rgba(255,155,55,1) !important;
 }
-#nav-bar { height:35px!important; }
+.tabbrowser-tab, .tabs-newtab-button {margin:3px 11px 0 0 !important;}
+#nav-bar { height:27px!important;overflow:hidden;margin-top:-5px!important;}
+#urlbar,.textbox-input-box, .urlbar-input-box,.autocomplete-textbox-container, .urlbar-textbox-container， #TabsToolbar，#navigator-toolbox > #nav-bar，#nav-bar,#main-window,#TabsToolbar {
+	color:#cfc!important;background:#000!important;}
 
 
+/** Tab bar bottom border **/
+/* Pre-Australis */
+#PersonalToolbar ~ #TabsToolbar { padding-bottom: 0 !important; box-shadow: none !important; }
+/* Australis */
+#main-window #TabsToolbar ~ toolbar#nav-bar ,.textbox-input-box, .urlbar-input-box,.autocomplete-textbox-container, .urlbar-textbox-container { margin-top: -6px !important; border-top: 1px solid transparent !important;  /* Firefox 32+ */ }
+#TabsToolbar::after { border-bottom-color: transparent !important; }
+/** End Tab bar bottom border **/
 
 
-* {color:#ccc9c0 !important;border:none;}
+/** Nav bar top border **/
+/* Australis only */
+#TabsToolbar ~ #nav-bar, #verticaltabs-box ~ * #nav-bar { box-shadow: none !important; }
+/** End Nav bar top border **/
+
+
+/** Nav bar bottom border **/
+/* Pre-Australis */
+#main-window:not([disablechrome]) #navigator-toolbox { border-style: none !important; }
+/* Australis */
+#main-window:not([disablechrome]) #navigator-toolbox::after { display: none !important; }
+/** End Nav bar bottom border **/
+
+
+/*** The End ***/

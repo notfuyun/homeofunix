@@ -1,0 +1,24 @@
+@-moz-document domain(nssd.org) {
+* a, a  {overflow:inherit!important;}
+}
+@-moz-document domain(youtube.com) {
+* a, a  {overflow:inherit!important;}
+}
+@-moz-document domain(pushbullet.com) {
+.text-part > div{color:#ccd!important;background:#321!important;}
+}
+@-moz-document domain(zhihu.com) {
+div.zu-top, div#zh-footer, div.AppPromotionBar, div.GaussianBlur {width:0px!important;height:0px!important;display:none!important;-moz-appearance: none !important;}
+}
+
+* {color:#655;background:transparent;}
+img {opacity:1.0!important; background-color:rgba(192,168,1,1)!important; color:#f01!important;}
+
+div#newtab-vertical-margin,body,#newtab-customize-overlay,#newtab-customize-panel-container {background-color:#100;border:none;}
+
+
+/* recss for dark transparent background */
+*[background-color*="transparent"] {background:#ccc!important;}
+
+/* END recss for dark transparent background */
+
