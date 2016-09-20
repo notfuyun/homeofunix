@@ -37,7 +37,8 @@ set laststatus=2
 " Theme
 set background=dark
 "colorscheme lucius
-colorscheme jellybeans
+"colorscheme jellybeans
+colorscheme Tomorrow-Night
 " LuciusBlack
 if !has("gui_running")
     set term=xterm
@@ -47,7 +48,7 @@ endif
 
 highlight LineNR ctermfg=DarkMagenta guifg=#336600 guibg=#000000
 highlight StatusLine guifg=#669900 guibg=#000000
-set directory=$VIM/swap,.,~/tmp " swap file
+set directory=Z:/,.,~/tmp " swap file
 "show Show invisibles
 set list
 set listchars=eol:¬,tab:>-,trail:•,extends:>,precedes:<,
@@ -57,8 +58,8 @@ set listchars=eol:¬,tab:>-,trail:•,extends:>,precedes:<,
 highlight NonText guifg=#666633
 highlight SpecialKey guifg=#669966
 "End Show invisibles
-iab xdate <c-r>=strftime("%Y/%m/%d %H:%M:%S")<cr>
-imap <F5> <Esc>:w<CR> :GoRun<CR>
-map <F5> <Esc>:w<CR> :GoRun<CR>
-map <F6>  <Esc>:w<CR>:set ff=unix<CR><CR>:w<CR>
-imap <F6> <Esc>:w<CR>:set ff=unix<CR><CR>:w<CR>
+iab xdate <c-r>=strftime("%Y-%m-%d %H:%M:%S")<cr>
+imap <F5> <Esc>:w<CR>:GoRun<CR>
+map <F5> <Esc>:w<CR>:GoRun<CR>
+map <F6> <Esc>:w<CR>:set ff=unix<CR>:w<CR>
+imap <F6> <Esc>:w<CR>:set ff=unix<CR>:w<CR>
